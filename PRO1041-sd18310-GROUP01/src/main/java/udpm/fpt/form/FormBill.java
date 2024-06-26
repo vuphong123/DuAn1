@@ -39,12 +39,12 @@ import udpm.fpt.model.SANPHAMCHITIET;
 import udpm.fpt.model.SIZE;
 import udpm.fpt.model.User;
 import udpm.fpt.model.Voucher;
-import udpm.fpt.repository.IBillDetails_Respository;
-import udpm.fpt.repository.IBill_Respository;
 import udpm.fpt.repository.IChiTietSanPham_Respository;
 import udpm.fpt.repository.ISANPHAM_Respository;
 import udpm.fpt.service.BillService;
 import udpm.fpt.swing.table.TableCustom;
+import udpm.fpt.repository.IBillDetails_Repository;
+import udpm.fpt.repository.IBill_Repository;
 
 /**
  *
@@ -58,8 +58,8 @@ public final class FormBill extends javax.swing.JPanel {
     private List<SANPHAMCHITIET> SAN_PHAM_REPO = new ArrayList();
     private List<BILL> HOA_DON_REPO = new ArrayList();
     private List<BILLCHITIET> HDCT_REPO = new ArrayList();
-    IBill_Respository bill = getBean(IBill_Respository.class);
-    IBillDetails_Respository billDetail = getBean(IBillDetails_Respository.class);
+    IBill_Repository bill = getBean(IBill_Repository.class);
+    IBillDetails_Repository billDetail = getBean(IBillDetails_Repository.class);
     ISANPHAM_Respository itSanPham = getBean(ISANPHAM_Respository.class);
     IChiTietSanPham_Respository itChiTietSanPham = getBean(IChiTietSanPham_Respository.class);
     private List<SANPHAM> listSanPham = new ArrayList<>();

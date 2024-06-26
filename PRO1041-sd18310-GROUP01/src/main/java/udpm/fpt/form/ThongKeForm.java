@@ -20,9 +20,9 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 import static udpm.fpt.Application.getBean;
 import udpm.fpt.config.DBConnect1;
-import udpm.fpt.repository.IBill_Respository;
 import udpm.fpt.service.ThongKeService;
 import udpm.serviceDelivery.ThongKeModel;
+import udpm.fpt.repository.IBill_Repository;
 
 /**
  *
@@ -30,7 +30,7 @@ import udpm.serviceDelivery.ThongKeModel;
  */
 public class ThongKeForm extends javax.swing.JPanel {
 
-    IBill_Respository itBill = getBean(IBill_Respository.class);
+    IBill_Repository itBill = getBean(IBill_Repository.class);
     NumberFormat numberFormat = NumberFormat.getInstance();
     private ThongKeService tksv = new ThongKeService();
     DBConnect1 db = new DBConnect1();

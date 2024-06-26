@@ -17,7 +17,7 @@ import udpm.fpt.model.BILL;
  *
  * @author PHONG PC
  */
-public interface IBill_Respository extends JpaRepository<BILL, String>{
+public interface IBill_Repository extends JpaRepository<BILL, String>{
     @Query("From BILL WHERE TrangThai like :status ORDER BY NgayTao desc")
     List<BILL> findBillTheoTrangThai(@Param("status") String string);
     

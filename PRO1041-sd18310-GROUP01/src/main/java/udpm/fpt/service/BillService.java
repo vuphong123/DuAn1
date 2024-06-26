@@ -20,8 +20,6 @@ import udpm.fpt.model.SANPHAM;
 import udpm.fpt.model.SANPHAMCHITIET;
 import udpm.fpt.model.SIZE;
 import udpm.fpt.model.Voucher;
-import udpm.fpt.repository.IBillDetails_Respository;
-import udpm.fpt.repository.IBill_Respository;
 import udpm.fpt.repository.IChiTietSanPham_Respository;
 import udpm.fpt.repository.ICustomer_Respository;
 import udpm.fpt.repository.IKieuDang;
@@ -29,6 +27,8 @@ import udpm.fpt.repository.IMauSac;
 import udpm.fpt.repository.ISANPHAM_Respository;
 import udpm.fpt.repository.ISize;
 import udpm.fpt.repository.IVoucher;
+import udpm.fpt.repository.IBillDetails_Repository;
+import udpm.fpt.repository.IBill_Repository;
 
 /**
  *
@@ -39,8 +39,8 @@ public class BillService {
     private IChiTietSanPham_Respository spct = getBean(IChiTietSanPham_Respository.class);
     private ISANPHAM_Respository sp = getBean(ISANPHAM_Respository.class);
     private ICustomer_Respository kh = getBean(ICustomer_Respository.class);
-    private IBill_Respository HD = getBean(IBill_Respository.class);
-    private IBillDetails_Respository HDCT = getBean(IBillDetails_Respository.class);
+    private IBill_Repository HD = getBean(IBill_Repository.class);
+    private IBillDetails_Repository HDCT = getBean(IBillDetails_Repository.class);
     private IVoucher voucher = getBean(IVoucher.class);
     private IMauSac itMS = getBean(IMauSac.class);
     private IKieuDang itKD = getBean(IKieuDang.class);

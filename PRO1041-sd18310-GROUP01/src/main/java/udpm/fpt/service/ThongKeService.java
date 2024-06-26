@@ -9,13 +9,13 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executors;
 import static udpm.fpt.Application.getBean;
 import udpm.fpt.model.BILLCHITIET;
-import udpm.fpt.repository.IBillDetails_Respository;
-import udpm.fpt.repository.IBill_Respository;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
 import udpm.fpt.config.DBConnect1;
 import udpm.serviceDelivery.ThongKeModel;
+import udpm.fpt.repository.IBillDetails_Repository;
+import udpm.fpt.repository.IBill_Repository;
 
 /**
  *
@@ -23,8 +23,8 @@ import udpm.serviceDelivery.ThongKeModel;
  */
 public class ThongKeService {
 
-    IBill_Respository itBill = getBean(IBill_Respository.class);
-    IBillDetails_Respository itBillChiTiet = getBean(IBillDetails_Respository.class);
+    IBill_Repository itBill = getBean(IBill_Repository.class);
+    IBillDetails_Repository itBillChiTiet = getBean(IBillDetails_Repository.class);
 
     public List<ThongKeModel> getALL() {
         String sql = "SELECT sp.id, sp.TenSanPham, sp.SoLuong, sum(bct.SoLuongDaMua) , sum(bct.ThanhTien)  from BILL b "

@@ -8,15 +8,15 @@ import udpm.fpt.Application;
 import static udpm.fpt.Application.getBean;
 import udpm.fpt.model.BILL;
 import udpm.fpt.model.BILLCHITIET;
-import udpm.fpt.repository.IBillDetails_Respository;
-import udpm.fpt.repository.IBill_Respository;
+import udpm.fpt.repository.IBillDetails_Repository;
+import udpm.fpt.repository.IBill_Repository;
 
 /**
  * @author NONG HOANG VU
  */
 public class HistoryService {
-    IBill_Respository itBill = getBean(IBill_Respository.class);
-    IBillDetails_Respository itBillDetail = getBean(IBillDetails_Respository.class);
+    IBill_Repository itBill = getBean(IBill_Repository.class);
+    IBillDetails_Repository itBillDetail = getBean(IBillDetails_Repository.class);
     
     public CompletableFuture<List<BILL>> findAllBill() {
         return CompletableFuture.supplyAsync(() -> {
