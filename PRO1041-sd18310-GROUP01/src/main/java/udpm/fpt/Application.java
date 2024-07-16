@@ -7,10 +7,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 import udpm.fpt.form.Login;
 import udpm.fpt.main.Main;
 
-/**
- *
- * @author NONG HOANG VU
- */
 @SpringBootApplication
 public class Application {
 
